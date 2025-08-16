@@ -1,0 +1,333 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Header styles */
+.app-header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Navigation styles */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  text-decoration: none;
+}
+
+.nav-link:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Main content */
+.main-content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Container styles */
+.cities-container,
+.add-city-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Headings */
+.cities-container h2,
+.add-city-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Cities list section */
+.cities-list-section {
+  margin-bottom: 2rem;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.city-item {
+  margin: 0;
+}
+
+.city-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.city-link:hover {
+  background-color: #f0f4ff;
+  text-decoration: underline;
+  border-color: #6366f1;
+}
+
+.city-link:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* City details styles */
+.city-details {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
+  margin-top: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.city-details h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: none;
+  font-size: 1.5rem;
+}
+
+.city-details p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.city-details strong {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+/* Form styles */
+.add-city-form {
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-input:hover {
+  border-color: #bbb;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Button styles */
+.add-city-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.add-city-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.add-city-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.add-city-btn:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+.add-city-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .cities-container,
+  .add-city-container {
+    padding: 1.5rem;
+  }
+  
+  .app-header {
+    padding: 1rem;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .add-city-form {
+    max-width: 100%;
+  }
+  
+  .form-input {
+    font-size: 16px; /* Prevents zoom on mobile */
+  }
+}
+
+/* Loading and error states */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.error {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid #dc2626;
+  margin: 1rem 0;
+}
+
+/* Accessibility improvements */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Animation for smooth transitions */
+.cities-container,
+.add-city-container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
